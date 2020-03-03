@@ -1,2 +1,1 @@
-# quarkus-rest-client-tck-quickstart
-Quarkus Mutual TLS Quickstart
+# Quarkus Mutual TLS Quickstart
