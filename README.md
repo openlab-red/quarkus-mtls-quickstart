@@ -15,29 +15,32 @@
 
 ## Run
 
-### Launch 
-* Server
+### Server
+
+Listening on 8443.
+
+* JVM 
   ```
     java -jar target/rest-server-tck-1.0-SNAPSHOT-runner.jar
   ```
-  
-* Client
-  ```
-    java -jar target/rest-client-tck-1.0-SNAPSHOT-runner.jar
-  ```
-  
-### Launch Native
-
-* Server
+* Native
   ```
     ./target/rest-server-tck-1.0-SNAPSHOT-runner
   ```
-  
-* Client
+ 
+### Client
+
+Listening on 8080.
+
+* JVM 
+  ```
+    java -jar target/rest-client-tck-1.0-SNAPSHOT-runner.jar
+  ```
+* Native
   ```
     ./target/rest-client-tck-1.0-SNAPSHOT-runner
   ```
-
+  
 ## Test
 
 ```
