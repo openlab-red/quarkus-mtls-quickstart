@@ -1,5 +1,7 @@
 # Quarkus Mutual TLS Quickstart
 
+![mutual_tls.png](images/mutual_tls.png)
+
 ## Build
 
 * JVM 
