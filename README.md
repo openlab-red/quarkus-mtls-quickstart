@@ -1,17 +1,15 @@
 # Quarkus Mutual TLS Quickstart
 
-
 ## Build
 
-```
- mvn clean package
-```
-
-## Build Native
-
-```
- mvn clean package -Pnative
-```
+* JVM 
+  ```
+  mvn clean package
+  ```
+* Native
+  ```
+  mvn clean package -Pnative
+  ```
 
 ## Run
 
