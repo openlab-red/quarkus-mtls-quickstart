@@ -8,7 +8,7 @@ from diagrams.k8s.compute import Pod
 from diagrams.k8s.rbac import User
 
 
-quarkus_url = "https://www.kindpng.com/picc/m/275-2755570_quarkus-png-transparent-png.png"
+quarkus_url = "https://github.com/openlab-red/quarkus-rest-client-tck-quickstart/raw/master/images/quarkus.png"
 quarkus_icon = "quarkus.png"
 
 urlretrieve(quarkus_url, quarkus_icon)
