@@ -151,5 +151,5 @@ This section is to simulate a private certificate authority.
 
 ```
 curl http://client-mtls.apps-crc.testing/hello
-hello
+hello from server
 ```
