@@ -1,0 +1,13 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1beta1
+metadata:
+  name: client
+spec:
+  rules:
+    - host: client-mtls.apps-crc.testing
+      http:
+        paths:
+          - path: /hello
+            backend:
+              serviceName: client
+              servicePort: 8080

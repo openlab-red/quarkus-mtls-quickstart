@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: server
+  namespace: mtls
+data:
+  application.properties: >-
+    quarkus.http.ssl.certificate.key-store-file=/deployments/tls/server.keystore
+
+    quarkus.http.ssl.certificate.key-store-password=password
+
+    quarkus.http.ssl.certificate.trust-store-file=/deployments/tls/ca/truststore.keystore
+    
+    quarkus.http.ssl.certificate.trust-store-password=password

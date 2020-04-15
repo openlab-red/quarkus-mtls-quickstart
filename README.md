@@ -2,7 +2,9 @@
 
 ![mutual_tls.png](images/mutual_tls.png)
 
-## Build
+## Local Deployment
+
+### Build
 
 * JVM 
   ```
@@ -13,11 +15,9 @@
   mvn clean package -Pnative
   ```
 
-## Run
+### Run
 
-### Server
-
-Listening on 8443.
+On Server listening on 8443.
 
 * JVM 
   ```
@@ -28,9 +28,7 @@ Listening on 8443.
     ./target/rest-server-tck-1.0-SNAPSHOT-runner
   ```
  
-### Client
-
-Listening on 8080.
+On Client listening on 8080.
 
 * JVM 
   ```
@@ -41,12 +39,13 @@ Listening on 8080.
     ./target/rest-client-tck-1.0-SNAPSHOT-runner
   ```
   
-## Test
+### Test
 
 ```
  curl http://localhost:8080/hello
- hello
+ hello from server
 ```
 
+## On Kubernetes / OpenShift
 
-
+[Deploy](./deploy/README.md)
