@@ -21,22 +21,22 @@ On Server listening on 8443.
 
 * JVM 
   ```
-    java -jar target/rest-server-tck-1.0-SNAPSHOT-runner.jar
+    java -jar target/quarkus-server-mtls-1.0-SNAPSHOT-runner.jar
   ```
 * Native
   ```
-    ./target/rest-server-tck-1.0-SNAPSHOT-runner
+    ./target/quarkus-server-mtls-1.0-SNAPSHOT-runner
   ```
  
 On Client listening on 8080.
 
 * JVM 
   ```
-    java -jar target/rest-client-tck-1.0-SNAPSHOT-runner.jar
+    java -jar target/quarkus-client-mtls-1.0-SNAPSHOT-runner.jar
   ```
 * Native
   ```
-    ./target/rest-client-tck-1.0-SNAPSHOT-runner
+    ./target/quarkus-client-mtls-1.0-SNAPSHOT-runner
   ```
   
 ### Test

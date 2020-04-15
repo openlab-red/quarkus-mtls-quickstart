@@ -5,12 +5,12 @@ metadata:
   namespace: mtls
 data:
   application.properties: >-
-    org.acme.restclient.tck.GreetingService/mp-rest/url=https://server:8443
+    org.acme.client.mtls.GreetingService/mp-rest/url=https://server:8443
 
-    org.acme.restclient.tck.GreetingService/mp-rest/trustStore=/deployments/tls/ca/truststore.keystore
+    org.acme.client.mtls.GreetingService/mp-rest/trustStore=/deployments/tls/ca/truststore.keystore
 
-    org.acme.restclient.tck.GreetingService/mp-rest/trustStorePassword=password
+    org.acme.client.mtls.GreetingService/mp-rest/trustStorePassword=password
     
-    org.acme.restclient.tck.GreetingService/mp-rest/keyStore=/deployments/tls/client.keystore
+    org.acme.client.mtls.GreetingService/mp-rest/keyStore=/deployments/tls/client.keystore
     
-    org.acme.restclient.tck.GreetingService/mp-rest/keyStorePassword=password
+    org.acme.client.mtls.GreetingService/mp-rest/keyStorePassword=password

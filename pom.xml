@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.acme</groupId>
-    <artifactId>rest-client-tck-quickstart</artifactId>
+    <artifactId>mtls-quickstart</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>rest-client-tck</module>
-        <module>rest-server-tck</module>
+        <module>quarkus-client-mtls</module>
+        <module>quarkus-server-mtls</module>
     </modules>
 </project>
