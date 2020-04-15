@@ -115,7 +115,7 @@ This section is to simulate a private certificate authority.
 3. Truststore Secret
 
    ```
-   oc create secret generic truststore --from-file=tls/ca/truststore.keystore
+   oc create secret generic truststore --from-file=tls/ca/truststore
    ```
 
 ## Deploy Server Application
