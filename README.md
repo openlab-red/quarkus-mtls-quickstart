@@ -1,6 +1,6 @@
 # Quarkus Mutual TLS Quickstart
 
-![mutual_tls.png](images/mutual_tls.png)
+![mutual_tls.png](diagram/mutual_tls.png)
 
 ## Local Deployment
 
