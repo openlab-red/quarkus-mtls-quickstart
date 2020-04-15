@@ -25,7 +25,7 @@ This section is to simulate a private certificate authority.
 2. Create a Truststore
 
     ```
-    keytool -import -storepass password -file tls/ca/ca.crt -alias mycompany.com -keystore tls/ca/truststore.keystore
+    keytool -import -storepass password -file tls/ca/ca.crt -alias mycompany.com -keystore tls/ca/truststore
     ```
 
 ### Server Certificate
@@ -60,12 +60,12 @@ This section is to simulate a private certificate authority.
 4. Import to truststore
 
     ```
-    keytool -import -storepass password -file tls/server/server.crt -alias server -keystore tls/ca/truststore.keystore
+    keytool -import -storepass password -file tls/server/server.crt -alias server -keystore tls/ca/truststore
     ```
 
 ### Client Certificate
 
-1. Server Key
+1. Client Key
 
     ```
     keytool -genkeypair -storepass password -keyalg RSA -keysize 2048 -dname "CN=client" -alias client -keystore tls/client/client.keystore
@@ -95,7 +95,7 @@ This section is to simulate a private certificate authority.
 4. Import to truststore
 
     ```
-    keytool -import -storepass password -file tls/client/client.crt -alias client -keystore tls/ca/truststore.keystore
+    keytool -import -storepass password -file tls/client/client.crt -alias client -keystore tls/ca/truststore
     ```
 
 ## Create Secret

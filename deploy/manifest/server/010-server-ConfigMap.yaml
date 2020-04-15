@@ -9,6 +9,6 @@ data:
 
     quarkus.http.ssl.certificate.key-store-password=password
 
-    quarkus.http.ssl.certificate.trust-store-file=/deployments/tls/ca/truststore.keystore
+    quarkus.http.ssl.certificate.trust-store-file=/deployments/tls/ca/truststore
     
     quarkus.http.ssl.certificate.trust-store-password=password

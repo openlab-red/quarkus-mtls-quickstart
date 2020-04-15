@@ -7,7 +7,7 @@ data:
   application.properties: >-
     org.acme.client.mtls.GreetingService/mp-rest/url=https://server:8443
 
-    org.acme.client.mtls.GreetingService/mp-rest/trustStore=/deployments/tls/ca/truststore.keystore
+    org.acme.client.mtls.GreetingService/mp-rest/trustStore=/deployments/tls/ca/truststore
 
     org.acme.client.mtls.GreetingService/mp-rest/trustStorePassword=password
     
