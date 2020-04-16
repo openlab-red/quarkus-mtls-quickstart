@@ -142,6 +142,8 @@ This section is to simulate a private certificate authority.
     ```
 
     > If you built native, the ConfigMap volumeMount on the Deployment is `/home/quarkus`
+    >
+    > To use the native Deployment launch also: `oc apply -f manifest/server/native/`
 
 ### Client
 
@@ -165,6 +167,8 @@ This section is to simulate a private certificate authority.
     ```
 
     > If you built native, the ConfigMap volumeMount on the Deployment is `/home/quarkus`
+    >
+    > To use the native Deployment launch also: `oc apply -f manifest/client/native/`
 
 
 ## Test it
