@@ -123,8 +123,15 @@ This section is to simulate a private certificate authority.
 ### Server
 
 1. Build
+
+    JVM:
     ```
     oc new-build --name=server registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-server-mtls
+    ```
+
+    Native:
+    ```
+    oc new-build --name=server quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-server-mtls
     ```
 
 2. Deploy
@@ -136,8 +143,15 @@ This section is to simulate a private certificate authority.
 ### Client
 
 1. Build
+
+    JVM:
     ```
     oc new-build --name=client registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-client-mtls
+    ```
+
+    Native:
+    ```
+    oc new-build --name=client quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-client-mtls
     ```
 
 2. Deploy
