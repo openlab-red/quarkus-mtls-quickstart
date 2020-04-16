@@ -157,7 +157,7 @@ This section is to simulate a private certificate authority.
     Native:
     ```
     oc new-build --name=client quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-client-mtls
-    oc patch bc/server -p '{"spec":{"resources":{"limits":{"cpu":"6", "memory":"6Gi"}}}}'
+    oc patch bc/client -p '{"spec":{"resources":{"limits":{"cpu":"6", "memory":"6Gi"}}}}'
     ```
 
 2. Deploy
