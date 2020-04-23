@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 public interface GreetingService {
 
     @GET
-    @Path("/hello")
+    @Path("/hello-server")
     @Produces(MediaType.TEXT_PLAIN)
     String hello();
 }

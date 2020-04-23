@@ -7,7 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-@Path("/hello")
+@Path("/hello-client")
 public class GreetingResource {
 
     @Inject

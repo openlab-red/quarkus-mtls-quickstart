@@ -19,8 +19,8 @@ with Diagram("Mutual TLS", show=False):
         users = [User("Users")]
 
     with Cluster("Mutual TLS"):
-        client = Custom("http://client:8080/hello", quarkus_icon)
-        server = Custom("https://server:8443/hello", quarkus_icon)
+        client = Custom("/hello-client", quarkus_icon)
+        server = Custom("/hello-server", quarkus_icon)
         client >> [server]
         server >> [client]
 

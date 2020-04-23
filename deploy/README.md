@@ -174,6 +174,6 @@ This section is to simulate a private certificate authority.
 ## Test it
 
 ```
-curl http://client-mtls.apps-crc.testing/hello
+curl http://client-mtls.apps-crc.testing/hello-client
 hello from server
 ```

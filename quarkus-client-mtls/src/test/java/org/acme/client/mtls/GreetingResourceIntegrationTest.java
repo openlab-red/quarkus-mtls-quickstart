@@ -35,7 +35,7 @@ public class GreetingResourceIntegrationTest {
     static void start() {
         wireMockServer.start();
 
-        stubFor(get(urlEqualTo("/hello")).willReturn(
+        stubFor(get(urlEqualTo("/hello-client")).willReturn(
           aResponse().withStatus(200)
             .withHeader("Content-Type", MediaType.TEXT_PLAIN)
             .withBody("hello")));

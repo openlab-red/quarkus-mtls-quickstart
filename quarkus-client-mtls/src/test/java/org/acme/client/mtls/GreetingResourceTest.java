@@ -23,7 +23,7 @@ public class GreetingResourceTest {
         Mockito.when(greetingService.hello()).thenReturn("hello from server");
 
         given()
-          .when().get("/hello")
+          .when().get("/hello-client")
           .then()
              .statusCode(200)
              .body(is("hello from server"));

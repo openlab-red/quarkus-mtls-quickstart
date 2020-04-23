@@ -42,7 +42,7 @@ On Client listening on 8080.
 ### Test
 
 ```
- curl http://localhost:8080/hello
+ curl http://localhost:8080/hello-client
  hello from server
 ```
 
