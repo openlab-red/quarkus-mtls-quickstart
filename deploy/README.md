@@ -126,7 +126,7 @@ This section is to simulate a private certificate authority.
 
     JVM:
     ```
-    oc new-build --name=server registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-server-mtls
+    oc new-build --name=server registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart#kubernetes-config --context-dir=/quarkus-server-mtls
     ```
 
     Native:
