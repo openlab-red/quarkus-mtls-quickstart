@@ -7,7 +7,7 @@ spec:
     - host: client-mtls.apps-crc.testing
       http:
         paths:
-          - path: /hello
+          - path: /hello-client
             backend:
               serviceName: client
               servicePort: 8080
