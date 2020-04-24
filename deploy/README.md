@@ -1,4 +1,4 @@
-# Deploy
+# Quarkus Mutual TLS OpenShift Deployment
 
 ## Create a namespace
 
@@ -118,11 +118,9 @@ This section is to simulate a private certificate authority.
    oc create secret generic truststore --from-file=tls/ca/truststore
    ```
 
-## Deploy Server Application
+## Build Server and Client Application
 
-### Server
-
-1. Build
+1. Server
 
     JVM:
     ```
@@ -135,19 +133,7 @@ This section is to simulate a private certificate authority.
     oc patch bc/server -p '{"spec":{"resources":{"limits":{"cpu":"6", "memory":"6Gi"}}}}'
     ```
 
-2. Deploy
-
-    ```
-    oc apply -f manifest/server/
-    ```
-
-    > If you built native, the ConfigMap volumeMount on the Deployment is `/home/quarkus`
-    >
-    > To use the native Deployment launch also: `oc apply -f manifest/server/native/`
-
-### Client
-
-1. Build
+2. Client
 
     JVM:
     ```
@@ -157,23 +143,61 @@ This section is to simulate a private certificate authority.
     Native:
     ```
     oc new-build --name=client quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-client-mtls
-    oc patch bc/client -p '{"spec":{"resources":{"limits":{"cpu":"6", "memory":"6Gi"}}}}'
+    oc patch bc/server -p '{"spec":{"resources":{"limits":{"cpu":"6", "memory":"6Gi"}}}}'
+    ```
+
+## Create Kubernetes Application Components
+
+```
+oc apply -f manifest/
+```
+
+The following kubernetes components will be created:
+
+* server ConfigMap
+* server Service
+* client ConfigMap
+* client Service
+* client Route
+
+## Deploy Application
+
+The following kubernetes components will be created:
+
+* server Deployment
+* client Deployment
+
+## With `kubernetes-config` Extensions
+
+1. Provide the `view` role to the default service account.
+
+    ```
+        oc policy add-role-to-user -z default view
     ```
 
 2. Deploy
 
     ```
-    oc apply -f manifest/client/
+        oc apply -f manifest/kuberntes-config/
     ```
 
-    > If you built native, the ConfigMap volumeMount on the Deployment is `/home/quarkus`
-    >
-    > To use the native Deployment launch also: `oc apply -f manifest/client/native/`
+## Without kubernetes-config` Extensions
 
+1. Deploy in JVM mode
 
-## Test it
+    ```
+        oc apply -f manifest/jvm/
+    ```
+
+2. Deploy in Native mode
+
+    ```
+        oc apply -f manifest/native/
+    ```
+
+# Test it
 
 ```
-curl http://client-mtls.apps-crc.testing/hello-client
+curl http://<client-external-address>/hello-client
 hello from server
 ```
