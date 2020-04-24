@@ -8,11 +8,11 @@
 
 * JVM 
   ```
-  mvn clean package
+  mvn clean package -Dquarkus.profile=dev
   ```
 * Native
   ```
-  mvn clean package -Pnative
+  mvn clean package -Pnative -Dquarkus.profile=dev
   ```
 
 ### Run
@@ -21,7 +21,7 @@ On Server listening on 8443.
 
 * JVM 
   ```
-    java -jar target/quarkus-server-mtls-1.0-SNAPSHOT-runner.jar
+    java -jar target/quarkus-server-mtls-1.0-SNAPSHOT-runner.jar 
   ```
 * Native
   ```
