@@ -1,41 +1,36 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: client
+  name: server
   namespace: mtls
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: client
+      app: server
   template:
     metadata:
       labels:
-        app: client
+        app: server
     spec:
       volumes:
-        - name: client
+        - name: server
           secret:
-            secretName: client
+            secretName: server
         - name: truststore
           secret:
             secretName: truststore
-        - name: config
-          configMap:
-              name: client
       containers:
-        - name: client
-          image: 'image-registry.openshift-image-registry.svc:5000/mtls/client:latest'
+        - name: server
+          image: 'image-registry.openshift-image-registry.svc:5000/mtls/server:latest'
           ports:
             - containerPort: 8443
               protocol: TCP
           resources: {}
           volumeMounts:
-            - name: client
+            - name: server
               readOnly: true
               mountPath: /deployments/tls
             - name: truststore
               readOnly: true
               mountPath: /deployments/tls/ca
-#            - name: config
-#              mountPath: /deployments/config
