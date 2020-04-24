@@ -124,7 +124,7 @@ This section is to simulate a private certificate authority.
 
     JVM:
     ```
-    oc new-build --name=server registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart#kubernetes-config --context-dir=/quarkus-server-mtls
+    oc new-build --name=server registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-server-mtls
     ```
 
     Native:
@@ -137,12 +137,12 @@ This section is to simulate a private certificate authority.
 
     JVM:
     ```
-    oc new-build --name=server registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart#kubernetes-config --context-dir=/quarkus-server-mtls
+    oc new-build --name=client registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-client-mtls
     ```
 
     Native:
     ```
-    oc new-build --name=server quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-server-mtls
+    oc new-build --name=client quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java11~https://github.com/openlab-red/quarkus-mtls-quickstart --context-dir=/quarkus-client-mtls
     oc patch bc/server -p '{"spec":{"resources":{"limits":{"cpu":"6", "memory":"6Gi"}}}}'
     ```
 
